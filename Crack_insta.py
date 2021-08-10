@@ -5,6 +5,31 @@ import time
 import random
 import sys
 import os
+import requests
+
+
+def chk():
+  uuid = str(os.geteuid()) + str(os.getlogin())
+  id = "-".join(uuid)
+  print("\x1b[37;1mID XOT: "+id)
+  try:
+    GUBXO = requests.get("https://github.com/fardinHack/list.txt/blob/main/list.txt").text
+    if id in GUBXO:
+      print("\033[92mYOUR ID IS ACTIVE.....")
+      msg = str(os.geteuid())
+      time.sleep(1)
+      pass
+    else:
+      print("\x1b[91mIDT ACTIVE NIA LA TELEGRAM NAMA BNERA....")
+      time.sleep(1)
+      sys.exit()
+  except:
+    sys.exit()
+    if name == '__main__':
+    	print(logo)
+    	chk()
+chk()
+
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 Edg/92.0.902.55'
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 Vivaldi/4.1'
